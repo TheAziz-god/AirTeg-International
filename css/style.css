@@ -1,88 +1,78 @@
-/* Global */
+/* Modern Minimal Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #f8fafc;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Header */
-header {
-  background-color: #004b8d;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+/* Remove old header styles for Bootstrap navbar usage */
 
-/* Navigation */
-nav ul {
-  list-style: none;
-  padding: 0;
-  background-color: #333;
-  margin: 0;
-  overflow: hidden;
-  text-align: center;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  color: white;
-  display: inline-block;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #0066cc;
-}
-
-/* Main content: Hero section */
+/* Hero Section */
 .hero {
-  background-color: #e2efff;
+  background-color: #e9f5ff;
   padding: 80px 20px;
   text-align: center;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
 .hero h2 {
   font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #004b8d;
 }
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
+  color: #555;
 }
 
-.hero button {
+.hero button,
+.btn-primary {
   background-color: #004b8d;
   border: none;
-  color: white;
-  padding: 12px 25px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  color: #fff;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: background 0.2s, transform 0.3s;
+  box-shadow: none;
 }
 
-.hero button:hover {
+.hero button:hover,
+.btn-primary:hover {
   background-color: #0066cc;
+  transform: scale(1.05);
 }
 
 /* Footer */
 footer {
-  background-color: #004b8d;
-  color: white;
+  background: #fff;
+  color: #888;
   text-align: center;
-  padding: 15px 0;
-  position: fixed;
-  bottom: 0;
+  padding: 24px 0 12px 0;
+  font-size: 1rem;
+  border-top: 1px solid #eee;
   width: 100%;
+  margin-top: auto;
+  position: static;
 }
+
+/* Alternative for sticky footer only when content is short */
+html, body {
+  height: 100%;
+}
+main {
+  flex: 1;
+}
+
 /* Fade-in animation */
 .fade-in {
   opacity: 0;
@@ -103,11 +93,36 @@ footer {
 }
 
 .interactive-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
   background-color: #0080ff;
 }
 
 /* Hide elements by default */
 .hidden {
   display: none;
+}
+
+/* Minimal Navbar Customization */
+.navbar {
+  background: #fff !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #004b8d !important;
+}
+
+.nav-link {
+  color: #222 !important;
+  font-weight: 500;
+  margin-right: 8px;
+  transition: color 0.2s;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #0066cc !important;
+  text-decoration: underline;
 }
