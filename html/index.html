@@ -4,10 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AirTeg International - Home</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css"> -->
+  <link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/animations.css">
+
+
 </head>
 <body>
-  <header>
+  <div id="welcomeMessage"></div>
+
+  <header class="fade-in">
     <h1>AirTeg International</h1>
     <nav>
       <ul>
@@ -25,10 +32,19 @@
       <h2>Welcome to AirTeg International</h2>
       <p>Delivering innovation, globally.</p>
       <button id="learnMoreBtn">Learn More</button>
+      <section class="hero fade-in">
+  ...
+  <button id="learnMoreBtn" class="interactive-btn">Learn More</button>
+  <div id="extraInfo" class="hidden">
+    <p>We provide cutting-edge solutions to clients around the world.</p>
+  </div>
+  <p>Current time: <span id="time"></span></p>
+</section>
+
     </section>
   </main>
 
-  <footer>
+  <footer class="fade-in">
     <p>&copy; 2025 AirTeg International. All rights reserved.</p>
   </footer>
 

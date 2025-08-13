@@ -34,3 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// Animation and button interaction
+document.addEventListener("DOMContentLoaded", () => {
+  const learnMoreBtn = document.getElementById("learnMoreBtn");
+  const extraInfo = document.getElementById("extraInfo");
+  const timeDisplay = document.getElementById("time");
+
+  // Show/hide extra info on button click
+  if (learnMoreBtn && extraInfo) {
+    learnMoreBtn.addEventListener("click", () => {
+      extraInfo.classList.toggle("hidden");
+    });
+  }
+
+  // Live clock
+  if (timeDisplay) {
+    setInterval(() => {
+      const now = new Date();
+      timeDisplay.textContent = now.toLocaleTimeString();
+    }, 1000);
+  }
+});
